@@ -1,0 +1,24 @@
+<% include header %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Author Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% docs.forEach(function(writerdata){ %>
+    <tr>
+      <th scope="row"><%= writerdata.id  %></th>
+      <td><%= writerdata.firstName%></td>
+      <td><%=  writerdata.lastName%></td>
+     <td> <a href="edit/<%= writerdata.id%>" >Edit</a></td>
+     <td> <a href="delet/<%= writerdata.id%>" >Delet</a></td>
+    </tr>
+    <%  })  %>
+   
+  </tbody>
+</table>
+<% include footer %>
